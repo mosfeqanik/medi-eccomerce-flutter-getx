@@ -18,4 +18,19 @@ dev_dependencies:
 
 flutter: 
   uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/logos/
 
+  fonts:
+    - family: Aeroport
+      fonts:
+        - asset: assets/fonts/Aeroport/Aeroport.ttf
+        - asset: assets/fonts/Aeroport/Aeroport-Bold.ttf
+        - asset: assets/fonts/Aeroport/Aeroport-BoldItalic.ttf
+        - asset: assets/fonts/Aeroport/Aeroport-Italic.ttf
+    - family: Barlow
+      fonts:
+        - asset: assets/fonts/Barlow/Barlow-Black.ttf
+        - asset: assets/fonts/Barlow/Barlow-Bold.ttf
+        - asset: assets/fonts/Barlow/Barlow-Italic.ttf
