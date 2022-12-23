@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/MedicineListTileWidget.dart';
+import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/product_view.dart';
 
 import '../../config/theme/AppColors.dart';
 import '../../config/theme/theme_service.dart';
@@ -27,8 +28,9 @@ class MedicineListView extends StatelessWidget {
         itemCount: controller.medicineList.value.length,
         itemBuilder: (context, index) {
           return GestureDetector(
-            onTap: (){
+            onTap: () {
               print(index);
+              Get.to(() => const ProductView());
             },
             child: MedicineListTileWidget(
               controller: controller,

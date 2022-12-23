@@ -37,11 +37,24 @@ class ThemeService {
   );
   static var priceStyle = TextStyle(
       fontSize: 17.sp,
-      color: AppColors.primaryColor,
+      color: AppColors.textPrimaryColor,
       fontWeight: FontWeight.w700);
   static var addToCartStyle = const TextStyle(fontWeight: FontWeight.bold);
   static var companyNameStyle = TextStyle(
     fontSize: 15.sp,
     color: AppColors.secondaryColor,
   );
+  static var lineThroughProductPriceStyle = TextStyle(
+    decoration: TextDecoration.lineThrough,
+    fontSize: 14.sp,
+    color: AppColors.secondaryColor,
+  );
+  static var ProductpriceStyle = TextStyle(
+      fontSize: 26.sp,
+      color: AppColors.textPrimaryColor,
+      fontWeight: FontWeight.w700);
+  static var DescriptionStyle =  TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w500,
+  );static var ButtonTextStyle =  TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500);
 }

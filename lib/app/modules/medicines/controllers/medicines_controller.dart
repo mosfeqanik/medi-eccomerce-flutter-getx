@@ -5,6 +5,8 @@ import '../model/MedicineModelClass.dart';
 class MedicinesController extends GetxController {
   //TODO: Implement HomeController
   var medicineList = <MedicineModel>[].obs;
+  var indexvalue = 0.obs;
+
 
   @override
   void onInit() {
