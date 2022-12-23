@@ -16,6 +16,7 @@ class MediApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: AppStrings.Appstittle,
       initialRoute: AppPages.INITIAL,
       theme: ThemeData(fontFamily: Assetsfont.Aeroport),
