@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 
@@ -15,12 +16,18 @@ class MediApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: AppStrings.Appstittle,
-      initialRoute: AppPages.INITIAL,
-      theme: ThemeData(fontFamily: Assetsfont.Aeroport),
-      getPages: AppPages.routes,
-    );
+    return ScreenUtilInit(
+        designSize: const Size(410, 866),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context, child) {
+          return GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: AppStrings.Appstittle,
+            initialRoute: AppPages.INITIAL,
+            theme: ThemeData(fontFamily: Assetsfont.Aeroport),
+            getPages: AppPages.routes,
+          );
+        });
   }
 }

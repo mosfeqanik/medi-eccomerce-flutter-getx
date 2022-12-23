@@ -2,13 +2,13 @@ class MedicineModel{
   String? medicineName;
   String? medicineCompanyName;
   String? medicinePrice;
-  String? medicineDiscount;
+  String? medicineRegularPrice;
   String? quantity;
 
   MedicineModel(
       {this.medicineName,
       this.medicineCompanyName,
       this.medicinePrice,
-      this.medicineDiscount,
+      this.medicineRegularPrice,
       this.quantity});
 }

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'AppColors.dart';
 
 class ThemeService {
   ThemeService._();
+
   // final storageKey = 'isDarkMode';
   //
   // ThemeMode getThemeMode() =>
@@ -19,9 +22,26 @@ class ThemeService {
   //   saveThemeMode(!isSavedDarkMode());
   // }
 
-
-  static var onboardTitleStyle = TextStyle(
-    fontWeight: FontWeight.bold,
+  static var ListHeadingTextStyle = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
   );
-
+  static var ListTileHeading = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w500,
+  );
+  static var lineThroughPriceStyle = TextStyle(
+    decoration: TextDecoration.lineThrough,
+    fontSize: 15.sp,
+    color: AppColors.secondaryColor,
+  );
+  static var priceStyle = TextStyle(
+      fontSize: 17.sp,
+      color: AppColors.primaryColor,
+      fontWeight: FontWeight.w700);
+  static var addToCartStyle = const TextStyle(fontWeight: FontWeight.bold);
+  static var companyNameStyle = TextStyle(
+    fontSize: 15.sp,
+    color: AppColors.secondaryColor,
+  );
 }
