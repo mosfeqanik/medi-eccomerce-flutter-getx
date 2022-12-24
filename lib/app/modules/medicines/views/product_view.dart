@@ -7,9 +7,7 @@ import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/product_
 import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/product_component/productDescription.dart';
 import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/product_component/productNamepart.dart';
 
-import '../../../config/theme/theme_service.dart';
 import '../../../utils/app_strings.dart';
-import '../../../utils/assets_image_path.dart';
 import '../../Common_components/ButtonWidget.dart';
 import '../controllers/medicines_controller.dart';
 
@@ -25,7 +23,7 @@ class ProductView extends GetView<MedicinesController> {
           icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
           onPressed: () => Get.back(),
         ),
-        title: Text(
+        title: const Text(
           AppStrings.Product,
           style: TextStyle(color: Colors.black),
         ),
@@ -47,16 +45,24 @@ class ProductView extends GetView<MedicinesController> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            productImage(),
+            productImage(
+                imagePath: controller.medicineList[controller.indexvalue.value]
+                    .medicineImagePath!),
             PriceRow(
               controller: controller,
-              productPrice: "৳10",
-              productRegularPrice: "৳11",
+              productPrice: controller
+                  .medicineList[controller.indexvalue.value].medicinePrice,
+              productRegularPrice: controller
+                  .medicineList[controller.indexvalue.value]
+                  .medicineRegularPrice,
             ),
             productNamepart(
                 controller: controller,
-                productName: "Napa 500mg ${controller.indexvalue.value}",
-                productCompanyName: "ePharma"),
+                productName: controller
+                    .medicineList[controller.indexvalue.value].medicineName,
+                productCompanyName: controller
+                    .medicineList[controller.indexvalue.value]
+                    .medicineCompanyName),
             productDividerwidget(),
             productDescription(controller: controller),
             Row(
@@ -87,6 +93,9 @@ class ProductView extends GetView<MedicinesController> {
                       print("Buy now");
                     })
               ],
+            ),
+            SizedBox(
+              height: 2.h,
             )
           ],
         ),
@@ -95,18 +104,16 @@ class ProductView extends GetView<MedicinesController> {
   }
 
   Divider productDividerwidget() {
-    return const Divider(
-      height: 50,
+    return Divider(
+      height: 35.h,
       thickness: 1.3,
     );
   }
 
-  Image productImage() {
+  Image productImage({required String imagePath}) {
     return Image.asset(
-      AssetsImagePath.napaimage,
+      imagePath,
       width: 450.w,
     );
   }
 }
-
-

@@ -22,7 +22,7 @@ class productNamepart extends StatelessWidget {
       children: [
         Text(
           productName!,
-          style: TextStyle(fontSize: 25),
+          style: const TextStyle(fontSize: 25),
         ),
         Text(
           productCompanyName!,

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../config/theme/theme_service.dart';
 import '../../controllers/medicines_controller.dart';
 
+// ignore: must_be_immutable
 class PriceRow extends StatelessWidget {
   String? productPrice;
   String? productRegularPrice;
