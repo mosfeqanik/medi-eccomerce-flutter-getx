@@ -53,8 +53,16 @@ class ThemeService {
       fontSize: 26.sp,
       color: AppColors.textPrimaryColor,
       fontWeight: FontWeight.w700);
-  static var DescriptionStyle =  TextStyle(
+  static var DescriptionStyle = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.w500,
-  );static var ButtonTextStyle =  TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500);
+  );
+  static var ButtonTextStyle = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+  );
+  static var MycartHeadingTextStyle = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+  );
 }

@@ -3,8 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:medi_eccomerce_flutter_getx/app/utils/app_strings.dart';
-import '../../../config/theme/AppColors.dart';
-import '../../../config/theme/theme_service.dart';
 import '../../ListHeading.dart';
 import '../MedicineListview.dart';
 import '../controllers/medicines_controller.dart';
@@ -26,12 +24,12 @@ class MedicinesView extends GetView<MedicinesController> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ListHeading(textHeading: AppStrings.Medicine),
+          Container(
+              padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 10.w),
+              child: ListHeading(textHeading: AppStrings.Medicine)),
           MedicineListView(controller: controller)
         ],
       ),
     );
   }
 }
-
-

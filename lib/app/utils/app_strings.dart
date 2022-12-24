@@ -9,9 +9,15 @@ class AppStrings {
 
   //Product Detail
   static const String Product = "Product";
+
   static const String Short_Description = "Short Description";
   static const String Product_Description ="Napa is indicated for fever, common cold and influenza, headache, toothache, earache, body pain, myalgia, neuralgia, dysmenorrhoea, sprains, colic pain, back pain, post-operative pain, postpartum pain, inflammatory pain, and post-vaccination pain in children. It is also indicated for rheumatic & osteoarthritic pain and stiffness of joints.";
 
+  static const String My_Cart = "My Cart";
+  static const String ePharma = "ePharma";
 
+  static const String Type_Item = "Type - Item";
+  static const String QTY = "QTY";
+  static const String Price_tk = "Price (tk)";
 
 }

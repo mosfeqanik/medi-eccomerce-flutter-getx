@@ -10,12 +10,9 @@ class ListHeading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20.h, vertical: 10.w),
-      child: Text(
-        textHeading!,
-        style: ThemeService.ListHeadingTextStyle,
-      ),
+    return Text(
+      textHeading!,
+      style: ThemeService.ListHeadingTextStyle,
     );
   }
 }

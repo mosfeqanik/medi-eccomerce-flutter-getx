@@ -6,6 +6,7 @@ import 'package:medi_eccomerce_flutter_getx/app/config/theme/AppColors.dart';
 import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/product_component/PriceRow.dart';
 import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/product_component/productDescription.dart';
 import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/product_component/productNamepart.dart';
+import 'package:medi_eccomerce_flutter_getx/app/routes/app_pages.dart';
 
 import '../../../utils/app_strings.dart';
 import '../../Common_components/ButtonWidget.dart';
@@ -46,7 +47,8 @@ class ProductView extends GetView<MedicinesController> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             productImage(
-                imagePath: controller.medicineList[controller.indexvalue.value]
+                imagePath: controller
+                    .medicineList[controller.indexvalue.value]
                     .medicineImagePath!),
             PriceRow(
               controller: controller,
@@ -65,41 +67,48 @@ class ProductView extends GetView<MedicinesController> {
                     .medicineCompanyName),
             productDividerwidget(),
             productDescription(controller: controller),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                ButtonWidget(
-                    btnHeight: 17.h,
-                    btnwidth: 48.w,
-                    btnbgColor: AppColors.btnSecondarColor,
-                    btntextColor: AppColors.primaryColor,
-                    btnborderColor: AppColors.primaryColor,
-                    btntext: 'Add to cart',
-                    btnFunc: () {
-                      print("Add to cart");
-                    }),
-                SizedBox(
-                  width: 10.w,
-                ),
-                ButtonWidget(
-                    btnHeight: 17.h,
-                    btnwidth: 48.w,
-                    btnbgColor: AppColors.primaryColor,
-                    btntextColor: Colors.white,
-                    btnborderColor: AppColors.primaryColor,
-                    btntext: 'Buy Now',
-                    btnFunc: () {
-                      print("Buy now");
-                    })
-              ],
+            SizedBox(
+              height: 20.h,
             ),
+            buttonRow(),
             SizedBox(
               height: 2.h,
             )
           ],
         ),
       ),
+    );
+  }
+
+  Row buttonRow() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        ButtonWidget(
+            btnHeight: 17.h,
+            btnwidth: 48.w,
+            btnbgColor: AppColors.btnSecondarColor,
+            btntextColor: AppColors.primaryColor,
+            btnborderColor: AppColors.primaryColor,
+            btntext: 'Add to cart',
+            btnFunc: () {
+              Get.toNamed(Routes.CART);
+            }),
+        SizedBox(
+          width: 10.w,
+        ),
+        ButtonWidget(
+            btnHeight: 17.h,
+            btnwidth: 48.w,
+            btnbgColor: AppColors.primaryColor,
+            btntextColor: Colors.white,
+            btnborderColor: AppColors.primaryColor,
+            btntext: 'Buy Now',
+            btnFunc: () {
+              Get.toNamed(Routes.CART);
+            })
+      ],
     );
   }
 
@@ -114,6 +123,7 @@ class ProductView extends GetView<MedicinesController> {
     return Image.asset(
       imagePath,
       width: 450.w,
+      height: 350.h,
     );
   }
 }
