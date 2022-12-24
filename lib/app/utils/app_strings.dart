@@ -19,5 +19,35 @@ class AppStrings {
   static const String Type_Item = "Type - Item";
   static const String QTY = "QTY";
   static const String Price_tk = "Price (tk)";
+  static const String Medicine_Total = "Medicine Total";
+  static const String Vendor_Total = "Vendor Total";
+  static const String Order_Summary = "Order Summary";
+  static const String Grand_Total = "Grand Total";
+  static const String Promo = "Promo";
+  static const String Apply_now = "Apply now";
+  static const String Saved = "Saved";
+  static const String Total_Payable = "Total Payable:";
+  static const String Apply_promo_code = "Apply Promo Code";
+  static const String Discount_on_Diagnostics = "Discount on Diagnostics";
+  static const String DiscountDialog = "Enjoy 25% discount on your next order! Upto \n৳100, minimum order value ৳400)";
+
+
+  static const String Shipping_Information_Form = "Shipping Information Form";
+  static const String Name = "Name";
+  static const String Email = "Email";
+  static const String ExampleEmail = "example@gmail.com";
+  static const String Address = "Address";
+  static const String ExampleAddress = "Flat / House / Road  ";
+  static const String Post = "Post";
+  static const String ExamplePostCode = "Post Code";
+
+  static const String Invoice_information = "Invoice information";
+  static const String Mobile_no = "Mobile no";
+  static const String I_Agree_with = "I Agree with";
+  static const String Terms_Conditions = " Terms & Conditions";
+
+  static const String Payment = "Payment";
+
+
 
 }
