@@ -58,7 +58,7 @@ class ConfirmationPageView extends GetView<CartController> {
               ShowApplyPromofunc: () => null,
               BtnText: "Confirm",
               BtnFunc: () {
-                Get.to(const PaymentPageView());
+                Get.to(() => PaymentPageView());
               },
             )
           ],
