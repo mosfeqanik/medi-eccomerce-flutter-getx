@@ -8,7 +8,9 @@ class AppColors {
   static Color secondaryColor = const Color(0xFF767676);
   // text color #0099FF
   static Color textPrimaryColor = const Color(0xFF0099FF);
+  static Color textfieldbg = const Color(0xB8DDDDDE);
 
   static Color btnSecondarColor = const Color(0xFFE2EBF6);
+  static Color BagdeColor = const Color(0xFF38B449);
 
 }

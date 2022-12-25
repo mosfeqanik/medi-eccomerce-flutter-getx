@@ -6,6 +6,7 @@ class AppStrings {
 
   //Medicine List
   static const String Medicine = "Medicine";
+  static const String searching_hint = "What you searching for?";
 
   //Product Detail
   static const String Product = "Product";
