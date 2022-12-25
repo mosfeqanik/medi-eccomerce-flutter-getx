@@ -12,8 +12,9 @@ import '../../medicines/model/MedicineModelClass.dart';
 
 class CartController extends GetxController {
   var cartMedicineList = <MedicineModel>[].obs;
-  var TermsCheckedBox= false.obs;
+  var TermsCheckedBox = false.obs;
   final count = 0.obs;
+  var selectedRadioTile = 0.obs;
 
   @override
   void onInit() {
@@ -59,7 +60,7 @@ class CartController extends GetxController {
           children: [
             Image.asset(AssetsImagePath.Tag),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 12.0.h,vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 12.0.h, vertical: 10),
               child: Text(
                 AppStrings.Apply_promo_code,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp),
@@ -101,15 +102,18 @@ class CartController extends GetxController {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    children: [
-                      Text(
-                        AppStrings.Discount_on_Diagnostics,
-                        style: ThemeService.ShowDialogAlertStyle,
-                      ),
-                      Text(AppStrings.DiscountDialog,
-                          style: ThemeService.ShowDialogDetailsStyle)
-                    ],
+                  Container(
+                    padding: EdgeInsets.only(left: 8.0.w),
+                    child: Column(
+                      children: [
+                        Text(
+                          AppStrings.Discount_on_Diagnostics,
+                          style: ThemeService.ShowDialogAlertStyle,
+                        ),
+                        Text(AppStrings.DiscountDialog,
+                            style: ThemeService.ShowDialogDetailsStyle)
+                      ],
+                    ),
                   ),
                   Container(
                     padding: EdgeInsets.all(10.sp),

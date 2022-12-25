@@ -59,7 +59,8 @@ class CartView extends GetView<CartController> {
                 },
                 BtnText: "CheckOut",
                 BtnFunc: () {
-                  Get.to(const ConfirmationPageView());
+                  Get.to(() => const ConfirmationPageView());
+
                 },
               )
             ],
