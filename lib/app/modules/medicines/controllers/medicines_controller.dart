@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/assets_image_path.dart';
@@ -7,6 +8,7 @@ class MedicinesController extends GetxController {
   //TODO: Implement HomeController
   var medicineList = <MedicineModel>[].obs;
   var indexvalue = 0.obs;
+  var searchTextController = TextEditingController();
 
   @override
   void onInit() {
