@@ -64,12 +64,30 @@ class ThemeService {
   static var MycartHeadingTextStyle = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.w600,
-  );static var TotalpayableTextStyle = TextStyle(color: AppColors.secondaryColor,fontSize: 18.sp);
+  );
+  static var TotalpayableTextStyle = TextStyle(
+    color: AppColors.secondaryColor,
+    fontSize: 18.sp,
+  );
   static var TotalpayablePriceTextStyle = TextStyle(
-      fontWeight: FontWeight.bold, fontSize: 18.sp);
+    fontWeight: FontWeight.bold,
+    fontSize: 18.sp,
+  );
   static var ShowDialogAlertStyle = TextStyle(
-      fontSize: 20.sp,
-      fontFamily: 'Barlow',
-      fontWeight: FontWeight.bold);
-  static var ShowDialogDetailsStyle = TextStyle(fontSize: 10.sp);
+      fontSize: 20.sp, fontFamily: 'Barlow', fontWeight: FontWeight.bold);
+  static var ShowDialogDetailsStyle = TextStyle(
+    fontSize: 10.sp,
+  );
+  static var ProductHeadingTextStyle = TextStyle(
+    fontSize: 25.sp,
+  );
+  static var PaymentMethodTittle = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 20.sp,
+  );
+  static var OrderConfirmDetailsTextStyle = TextStyle(
+    fontSize: 16.sp,
+  );
+  static var OrderConfirmTextStyle =
+      TextStyle(fontSize: 28.sp, fontWeight: FontWeight.w400);
 }
