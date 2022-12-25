@@ -47,6 +47,16 @@ class AppStrings {
   static const String Terms_Conditions = " Terms & Conditions";
 
   static const String Payment = "Payment";
+  static const String You_are_buyin_from = "You are buying from:";
+  static const String Diagnostics = "Diagnostics";
+  static const String Payment_methods = "Pay via any of the below methods";
+  static const String bKash_Payment = "bKash Payment";
+  static const String Credit_Debit_Card = "Credit/Debit Card";
+  static const String Nagad_Payment = "Nagad Payment";
+
+  static const String OrDerDone = "OrDerDone";
+  static const String Order_Placed_Successfully = "Order Placed Successfully";
+  static const String Order_Placed_Details= "One of our representatives will confirm your order shortly. You will receive an invoice through SMS.";
 
 
 
