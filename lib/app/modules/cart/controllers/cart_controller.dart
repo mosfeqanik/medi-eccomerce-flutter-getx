@@ -18,28 +18,28 @@ class CartController extends GetxController {
 
   @override
   void onInit() {
-    cartMedicineList.add(
-      MedicineModel(
-        medicineID: 1,
-        medicineName: "Ecospirin 150Mg Tablet 14’S",
-        medicineCompanyName: "ACME Limited",
-        medicinePrice: "7.50",
-        medicineRegularPrice: "8.43",
-        quantity: "0",
-        medicineImagePath: AssetsImagePath.Ecospirinimage,
-      ),
-    );
-    cartMedicineList.add(
-      MedicineModel(
-        medicineID: 2,
-        medicineName: "Napa",
-        medicineCompanyName: "Beximco-pharmaceuticals-ltd",
-        medicinePrice: "1.15",
-        medicineRegularPrice: "1.20",
-        quantity: "0",
-        medicineImagePath: AssetsImagePath.napaimage,
-      ),
-    );
+    // cartMedicineList.add(
+    //   MedicineModel(
+    //     medicineID: 1,
+    //     medicineName: "Ecospirin 150Mg Tablet 14’S",
+    //     medicineCompanyName: "ACME Limited",
+    //     medicinePrice: "7.50",
+    //     medicineRegularPrice: "8.43",
+    //     quantity: "0",
+    //     medicineImagePath: AssetsImagePath.Ecospirinimage,
+    //   ),
+    // );
+    // cartMedicineList.add(
+    //   MedicineModel(
+    //     medicineID: 2,
+    //     medicineName: "Napa",
+    //     medicineCompanyName: "Beximco-pharmaceuticals-ltd",
+    //     medicinePrice: "1.15",
+    //     medicineRegularPrice: "1.20",
+    //     quantity: "0",
+    //     medicineImagePath: AssetsImagePath.napaimage,
+    //   ),
+    // );
     super.onInit();
   }
 
@@ -137,5 +137,20 @@ class CartController extends GetxController {
           ],
         ),
         radius: 10.0);
+  }
+
+
+  AddToCart(){
+    cartMedicineList.add(
+      MedicineModel(
+        medicineID: 2,
+        medicineName: "Napa",
+        medicineCompanyName: "Beximco-pharmaceuticals-ltd",
+        medicinePrice: "1.15",
+        medicineRegularPrice: "1.20",
+        quantity: "0",
+        medicineImagePath: AssetsImagePath.napaimage,
+      ),
+    );
   }
 }

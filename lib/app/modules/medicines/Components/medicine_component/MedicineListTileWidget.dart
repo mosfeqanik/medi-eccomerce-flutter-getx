@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/theme/theme_service.dart';
+import '../../../cart/controllers/cart_controller.dart';
 import '../../controllers/medicines_controller.dart';
+import 'package:get/get.dart';
 
 class MedicineListTileWidget extends StatelessWidget {
   String? MedicineName;
@@ -43,9 +45,14 @@ class MedicineListTileWidget extends StatelessWidget {
                 MedicineCompanyName!,
                 style: ThemeService.companyNameStyle,
               ),
-              Text(
-                "${MedicineQuantity == "0" ? "Add to cart" : MedicineQuantity}",
-                style: ThemeService.addToCartStyle,
+              GestureDetector(
+                onTap: (){
+                  Get.find<CartController>().AddToCart();
+                },
+                child: Text(
+                  "${MedicineQuantity == "0" ? "Add to cart" : MedicineQuantity}",
+                  style: ThemeService.addToCartStyle,
+                ),
               )
             ],
           ),

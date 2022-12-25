@@ -6,6 +6,7 @@ import 'package:medi_eccomerce_flutter_getx/app/config/theme/AppColors.dart';
 import 'package:medi_eccomerce_flutter_getx/app/utils/app_strings.dart';
 import '../../Common_components/ListHeading.dart';
 import '../../Common_components/Badge.dart';
+import '../../cart/controllers/cart_controller.dart';
 import '../Components/medicine_component/MedicineListview.dart';
 import '../controllers/medicines_controller.dart';
 
@@ -24,7 +25,7 @@ class MedicinesView extends GetView<MedicinesController> {
               medicineAppbar(),
               Container(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 20.h, vertical: 10.w),
+                  EdgeInsets.symmetric(horizontal: 20.h, vertical: 10.w),
                   child: ListHeading(textHeading: AppStrings.Medicine)),
               MedicineListView(controller: controller)
             ],
@@ -49,7 +50,9 @@ class MedicinesView extends GetView<MedicinesController> {
       ),
       child: Column(
         children: [
-          AppbarRow(),
+          Obx(() {
+            return AppbarRow();
+          }),
           SearchTextfield(controller: controller),
         ],
       ),
@@ -62,8 +65,16 @@ class MedicinesView extends GetView<MedicinesController> {
       children: [
         SizedBox(width: 50.w),
         ListHeading(textHeading: AppStrings.Medicine),
-        Badge(
-          value: 1.toString(),
+        Get
+            .find<CartController>()
+            .cartMedicineList
+            .isNotEmpty
+            ? Badge(
+          value: Get
+              .find<CartController>()
+              .cartMedicineList
+              .length
+              .toString(),
           color: AppColors.BagdeColor,
           child: IconButton(
             onPressed: () {},
@@ -74,6 +85,14 @@ class MedicinesView extends GetView<MedicinesController> {
             color: Colors.black,
           ),
         )
+            : IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.shopping_cart_outlined,
+            size: 30.sp,
+          ),
+          color: Colors.black,
+        ),
       ],
     );
   }
