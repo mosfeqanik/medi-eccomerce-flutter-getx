@@ -8,8 +8,8 @@ import '../../../config/theme/AppColors.dart';
 import '../../../utils/app_strings.dart';
 import '../../../utils/assets_image_path.dart';
 import '../../Common_components/ButtonWidget.dart';
-import '../Components/OrderConfirmationDetails.dart';
-import '../Components/OrderplaceHeading.dart';
+import '../Components/order_complete/OrderConfirmationDetails.dart';
+import '../Components/order_complete/OrderplaceHeading.dart';
 
 class OrderCompleteView extends GetView {
   const OrderCompleteView({Key? key}) : super(key: key);

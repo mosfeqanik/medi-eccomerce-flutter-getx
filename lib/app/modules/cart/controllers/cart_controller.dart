@@ -20,6 +20,7 @@ class CartController extends GetxController {
   void onInit() {
     cartMedicineList.add(
       MedicineModel(
+        medicineID: 1,
         medicineName: "Ecospirin 150Mg Tablet 14’S",
         medicineCompanyName: "ACME Limited",
         medicinePrice: "7.50",
@@ -30,6 +31,7 @@ class CartController extends GetxController {
     );
     cartMedicineList.add(
       MedicineModel(
+        medicineID: 2,
         medicineName: "Napa",
         medicineCompanyName: "Beximco-pharmaceuticals-ltd",
         medicinePrice: "1.15",

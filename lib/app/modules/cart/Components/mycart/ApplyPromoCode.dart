@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/theme/AppColors.dart';
-import '../../../utils/app_strings.dart';
-import '../../../utils/assets_image_path.dart';
+import '../../../../config/theme/AppColors.dart';
+import '../../../../utils/app_strings.dart';
+import '../../../../utils/assets_image_path.dart';
 class ApplyPromocode extends StatelessWidget {
   const ApplyPromocode({Key? key}) : super(key: key);
 

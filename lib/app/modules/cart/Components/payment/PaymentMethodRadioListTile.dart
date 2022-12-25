@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart'
     '';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:medi_eccomerce_flutter_getx/app/modules/cart/Components/paymentRadiowidget.dart';
+import 'package:medi_eccomerce_flutter_getx/app/modules/cart/Components/payment/paymentRadiowidget.dart';
 
-import '../../../config/theme/AppColors.dart';
-import '../controllers/cart_controller.dart';
+import '../../../../config/theme/AppColors.dart';
+import '../../controllers/cart_controller.dart';
 class PaymentMethodRadioListTile extends StatelessWidget {
   final int? listTileValue;
   final String? logoPath;

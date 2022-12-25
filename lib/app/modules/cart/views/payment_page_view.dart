@@ -3,13 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:medi_eccomerce_flutter_getx/app/config/theme/AppColors.dart';
-import 'package:medi_eccomerce_flutter_getx/app/modules/cart/Components/paymentPageHeading.dart';
+import 'package:medi_eccomerce_flutter_getx/app/modules/cart/Components/payment/paymentPageHeading.dart';
 import 'package:medi_eccomerce_flutter_getx/app/utils/assets_image_path.dart';
 
 import '../../../config/theme/theme_service.dart';
 import '../../../utils/app_strings.dart';
 import '../../Common_components/ButtonWidget.dart';
-import '../Components/PaymentMethodRadioListTile.dart';
+import '../Components/payment/PaymentMethodRadioListTile.dart';
 import '../controllers/cart_controller.dart';
 import 'order_complete_view.dart';
 

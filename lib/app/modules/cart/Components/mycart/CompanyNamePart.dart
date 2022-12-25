@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../utils/app_strings.dart';
-import '../../../utils/assets_image_path.dart';
-import '../../ListHeading.dart';
+import '../../../../utils/app_strings.dart';
+import '../../../../utils/assets_image_path.dart';
+import '../../../Common_components/ListHeading.dart';
 class CompanyNamePart extends StatelessWidget {
   const CompanyNamePart({
     Key? key,

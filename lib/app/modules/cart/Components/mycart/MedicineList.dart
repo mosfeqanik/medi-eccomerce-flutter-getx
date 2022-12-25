@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../controllers/cart_controller.dart';
+import '../../controllers/cart_controller.dart';
 class MedicineList extends StatelessWidget {
   const MedicineList({
     Key? key,

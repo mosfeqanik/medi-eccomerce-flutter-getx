@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../config/theme/theme_service.dart';
-import '../controllers/medicines_controller.dart';
+import '../../../../config/theme/theme_service.dart';
+import '../../controllers/medicines_controller.dart';
 
 class MedicineListTileWidget extends StatelessWidget {
   String? MedicineName;

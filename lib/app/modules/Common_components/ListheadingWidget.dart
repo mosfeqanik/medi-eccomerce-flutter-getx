@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/theme/AppColors.dart';
+import '../../config/theme/AppColors.dart';
 
 class ListheadingWidget extends StatelessWidget {
   String? Textheading;

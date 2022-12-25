@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../config/theme/AppColors.dart';
-import '../../../config/theme/theme_service.dart';
-import '../../../utils/app_strings.dart';
-import '../../Common_components/ButtonWidget.dart';
-import 'ApplyPromoCode.dart';
+import '../../config/theme/AppColors.dart';
+import '../../config/theme/theme_service.dart';
+import '../../utils/app_strings.dart';
+import 'ButtonWidget.dart';
+import '../cart/Components/mycart/ApplyPromoCode.dart';
 
 class BottomPart extends StatelessWidget {
   final VoidCallback ShowApplyPromofunc;

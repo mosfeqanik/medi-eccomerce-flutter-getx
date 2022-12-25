@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/theme/theme_service.dart';
+import '../../../../config/theme/theme_service.dart';
 
 class OrderplaceHeading extends StatelessWidget {
   final String? headingText;

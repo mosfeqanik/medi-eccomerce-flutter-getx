@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/theme/theme_service.dart';
+import '../../../../config/theme/theme_service.dart';
 
 class OrderConfirmationDetails extends StatelessWidget {
   final String? detailText;

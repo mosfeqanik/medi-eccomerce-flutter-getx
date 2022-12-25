@@ -6,15 +6,15 @@ import 'package:medi_eccomerce_flutter_getx/app/config/theme/AppColors.dart';
 import 'package:medi_eccomerce_flutter_getx/app/utils/assets_image_path.dart';
 import '../../../config/theme/theme_service.dart';
 import '../../../utils/app_strings.dart';
-import '../Components/BottomPart.dart';
-import '../Components/CompanyNamePart.dart';
-import '../Components/MedicineList.dart';
-import '../Components/MedicineListHeading.dart';
-import '../Components/MyDivider.dart';
-import '../Components/OrdersumaryPart.dart';
-import '../Components/medicineTotalPart.dart';
+import '../../Common_components/BottomPart.dart';
+import '../Components/mycart/OrdersumaryPart.dart';
+import '../Components/mycart/MedicineList.dart';
+import '../Components/mycart/MedicineListHeading.dart';
+import '../../Common_components/MyDivider.dart';
+import '../Components/mycart/CompanyNamePart.dart';
+import '../Components/mycart/medicineTotalPart.dart';
 import '../controllers/cart_controller.dart';
-import 'confirmation_page_view.dart';
+import 'checkout_page_view.dart';
 
 class CartView extends GetView<CartController> {
   const CartView({Key? key}) : super(key: key);
@@ -60,7 +60,6 @@ class CartView extends GetView<CartController> {
                 BtnText: "CheckOut",
                 BtnFunc: () {
                   Get.to(() => const ConfirmationPageView());
-
                 },
               )
             ],
@@ -160,5 +159,4 @@ class CartView extends GetView<CartController> {
       ],
     );
   }
-
 }

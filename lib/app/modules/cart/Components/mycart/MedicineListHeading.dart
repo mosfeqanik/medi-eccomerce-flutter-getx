@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../utils/app_strings.dart';
-import 'ListheadingWidget.dart';
+import '../../../../utils/app_strings.dart';
+import '../../../Common_components/ListheadingWidget.dart';
 class MedicineListHeading extends StatelessWidget {
   const MedicineListHeading({
     Key? key,

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/MedicineListTileWidget.dart';
+import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/Components/medicine_component/MedicineListTileWidget.dart';
 import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/product_view.dart';
 
-import 'controllers/medicines_controller.dart';
+import '../../controllers/medicines_controller.dart';
 
 class MedicineListView extends StatelessWidget {
   const MedicineListView({

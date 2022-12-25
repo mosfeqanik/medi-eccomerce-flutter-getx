@@ -4,9 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:medi_eccomerce_flutter_getx/app/config/theme/AppColors.dart';
 import 'package:medi_eccomerce_flutter_getx/app/utils/app_strings.dart';
-import '../../ListHeading.dart';
-import '../../cart/Components/Badge.dart';
-import '../MedicineListview.dart';
+import '../../Common_components/ListHeading.dart';
+import '../../Common_components/Badge.dart';
+import '../Components/medicine_component/MedicineListview.dart';
 import '../controllers/medicines_controller.dart';
 
 class MedicinesView extends GetView<MedicinesController> {

@@ -3,13 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:medi_eccomerce_flutter_getx/app/config/theme/AppColors.dart';
-import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/product_component/PriceRow.dart';
-import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/product_component/productDescription.dart';
-import 'package:medi_eccomerce_flutter_getx/app/modules/medicines/views/product_component/productNamepart.dart';
 import 'package:medi_eccomerce_flutter_getx/app/routes/app_pages.dart';
 
 import '../../../utils/app_strings.dart';
 import '../../Common_components/ButtonWidget.dart';
+import '../Components/product_component/PriceRow.dart';
+import '../Components/product_component/productDescription.dart';
+import '../Components/product_component/productNamepart.dart';
 import '../controllers/medicines_controller.dart';
 
 class ProductView extends GetView<MedicinesController> {

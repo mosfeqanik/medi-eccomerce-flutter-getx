@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../config/theme/AppColors.dart';
+import '../../../../config/theme/AppColors.dart';
 class medicineTotalPart extends StatelessWidget {
   String? label;
   String? totalPrice;

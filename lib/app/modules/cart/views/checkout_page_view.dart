@@ -6,10 +6,11 @@ import 'package:medi_eccomerce_flutter_getx/app/config/theme/AppColors.dart';
 import 'package:medi_eccomerce_flutter_getx/app/modules/cart/views/payment_page_view.dart';
 
 import '../../../utils/app_strings.dart';
-import '../../ListHeading.dart';
-import '../Components/BottomPart.dart';
-import '../Components/MyDivider.dart';
-import '../Components/ShippingRowWidget.dart';
+import '../../Common_components/ListHeading.dart';
+import '../../Common_components/BottomPart.dart';
+import '../../Common_components/MyDivider.dart';
+import '../Components/shipping_info/ShippingRowWidget.dart';
+import '../Components/shipping_info/TeamsAndCondition.dart';
 import '../controllers/cart_controller.dart';
 
 class ConfirmationPageView extends GetView<CartController> {
@@ -89,34 +90,7 @@ class ConfirmationPageView extends GetView<CartController> {
         SizedBox(
           height: 15.h,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Obx(() {
-              return Checkbox(
-                value: controller.TermsCheckedBox.value,
-                onChanged: (value) {
-                  controller.TermsCheckedBox.value = value!;
-                },
-              );
-            }),
-            RichText(
-              text: TextSpan(
-                text: AppStrings.I_Agree_with,
-                style: TextStyle(color: AppColors.secondaryColor),
-                children: <TextSpan>[
-                  TextSpan(
-                    text: AppStrings.Terms_Conditions,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.primaryColor,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        )
+        TeamsAndCondition(controller: controller,)
       ],
     );
   }
@@ -153,3 +127,5 @@ class ConfirmationPageView extends GetView<CartController> {
     );
   }
 }
+
+
