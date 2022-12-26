@@ -68,6 +68,8 @@ This repo is forked from: https://github.com/phamdinhduc795397/flutter-getx-clea
     ├── generated_plugin_registrant.dart
     └── main.dart
 ```
+
+-----
 ## ScreenShots of these application
 <br /> 
 <img align="left" alt="verify_page" width="360px"  src="screenshots/1.png" />
