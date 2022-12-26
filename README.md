@@ -1,16 +1,79 @@
 # medi_eccomerce_flutter_getx
 
 A new Flutter project.
+<img src="screenshots/badges/built-with-love.svg" height="28px"/>&nbsp;&nbsp;
+<img src="screenshots/badges/flutter-dart.svg" height="28px" />&nbsp;&nbsp;
+<a href="https://choosealicense.com/licenses/mit/" target="_blank"><img src="screenshots/badges/license-MIT.svg" height="28px" /></a>&nbsp;&nbsp;
+<img src="screenshots/badges/Flutter-3.svg" height="28px" />&nbsp;&nbsp;
+<img src="screenshots/badges/dart-null_safety-blue.svg" height="28px"/>
 
-## Getting Started
+# GetX Clean Architecture
 
-This project is a starting point for a Flutter application.
+A Flutter Clean Architecture Using [GetX](https://github.com/jonataslaw/getx).
 
-A few resources to get you started if this is your first Flutter project:
+This repo is forked from: https://github.com/phamdinhduc795397/flutter-getx-clean-architecture
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Work Flow
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![alt text](screenshots/Clean-Architecture-Flutter-Diagram.png?raw=true)
+
+## Project Structure
+
+<img align="left" src="screenshots/folder_structure.png"></img>
+
+```
+    lib
+    ├── app
+    │   ├── config
+    │   │   └── (...)
+    │   ├── core
+    │   │   └── usecases
+    │   │       ├── no_param_usecase.dart
+    │   │       └── pram_usecase.dart
+    │   ├── extensions
+    │   │   └── color.dart
+    │   ├── services
+    │   │   └── local_storage.dart
+    │   ├── types
+    │   │   ├── category_type.dart
+    │   │   └── tab_type.dart
+    │   └── util
+    │       ├── dependency.dart
+    │       └── util.dart
+    ├── data
+    │   ├── models
+    │   │   └── (...)
+    │   ├── providers
+    │   │   ├── database
+    │   │   │   └── firebase_database_provider.dart
+    │   │   └── network
+    │   │       ├── apis
+    │   │       │   ├── article_api.dart
+    │   │       │   └── auth_api.dart
+    │   │       └── (...)
+    │   └── repositories
+    │       ├── article_repository.dart
+    │       └── auth_repository.dart
+    ├── domain
+    │   ├── entities
+    │   │   └── (...)
+    │   ├── repositories
+    │   │   └── (..)
+    │   └── usecases
+    │       └── (...)
+    ├── presentation
+    │   ├── controllers
+    │   │   ├── auth
+    │   │   ├── headline
+    │   │   └── news
+    │   ├── pages
+    │   │   ├── detail
+    │   │   ├── headline
+    │   │   ├── home
+    │   │   ├── news
+    │   │   └── profile
+    │   │
+    │   └── app.dart
+    ├── generated_plugin_registrant.dart
+    └── main.dart
+```
