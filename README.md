@@ -48,32 +48,32 @@ This repo is forked from: https://github.com/phamdinhduc795397/flutter-getx-clea
     │   │   │   └── firebase_database_provider.dart
     │   │   └── network
     │   │       ├── apis
-    │   │       │   ├── article_api.dart
     │   │       │   └── auth_api.dart
     │   │       └── (...)
-    │   └── repositories
-    │       ├── article_repository.dart
-    │       └── auth_repository.dart
-    ├── domain
-    │   ├── entities
-    │   │   └── (...)
-    │   ├── repositories
-    │   │   └── (..)
-    │   └── usecases
-    │       └── (...)
-    ├── presentation
-    │   ├── controllers
-    │   │   ├── auth
-    │   │   ├── headline
+    ├── modules
+    │   ├── cart
+    │   │   ├── bindings
+    │   │   ├── components
+    │   │   ├── controllers
+    │   │   └── views
+    │   ├── medicines
+    │   │   ├── bindings
+    │   │   ├── components
+    │   │   ├── controllers
+    │   │   └── views
+    │   ├── common_components
     │   │   └── news
-    │   ├── pages
-    │   │   ├── detail
-    │   │   ├── headline
-    │   │   ├── home
-    │   │   ├── news
-    │   │   └── profile
     │   │
     │   └── app.dart
     ├── generated_plugin_registrant.dart
     └── main.dart
 ```
+## ScreenShots of these application
+<br /> 
+<img align="left" alt="verify_page" width="360px"  src="screenshots/1.png" />
+<img align="left" alt="verify_page" width="360px"  src="https://github.com/mosfeqanik/shodai_ecommerce_getx/blob/main/screenshots/Screenshot_3.jpg" />
+<img align="left" alt="verify_page" width="360px"  src="https://github.com/mosfeqanik/shodai_ecommerce_getx/blob/main/screenshots/Screenshot2.jpg" />
+<img align="left" alt="verify_page" width="360px"  src="https://github.com/mosfeqanik/shodai_ecommerce_getx/blob/main/screenshots/Screenshot_4.jpg" />
+<img align="left" alt="verify_page" width="360px"  src="https://github.com/mosfeqanik/shodai_ecommerce_getx/blob/main/screenshots/Screenshot_6.jpg" />
+<img align="left" alt="verify_page" width="360px"  src="https://github.com/mosfeqanik/shodai_ecommerce_getx/blob/main/screenshots/Screenshot_7.jpg" />
+<br /> 
