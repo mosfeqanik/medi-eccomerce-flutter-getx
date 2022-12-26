@@ -70,12 +70,13 @@ This repo is forked from: https://github.com/phamdinhduc795397/flutter-getx-clea
 ```
 
 -----
+\n
 ## ScreenShots of these application
 <br /> 
 <img align="left" alt="verify_page" width="360px"  src="screenshots/1.png" />
 <img align="left" alt="verify_page" width="360px"  src="screenshots/product_details1.png" />
 <img align="left" alt="verify_page" width="360px"  src="screenshots/Product_details2.png" />
-<img align="left" alt="verify_page" width="360px"  src="screenshots/Product_details3.png" />
+<img align="left" alt="verify_page" width="360px"  src="screenshots/product_details3.png" />
 <img align="left" alt="verify_page" width="360px"  src="screenshots/Mycart.png" />
 <img align="left" alt="verify_page" width="360px"  src="screenshots/showdialogbox.png" />
 <img align="left" alt="verify_page" width="360px"  src="screenshots/mcart_shipping_Info.png" />
