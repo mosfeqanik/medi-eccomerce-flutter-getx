@@ -15,7 +15,7 @@ This repo is forked from: https://github.com/phamdinhduc795397/flutter-getx-clea
 
 ## Work Flow
 
-![alt text](https://raw.githubusercontent.com/phamdinhduc795397/flutter-getx-clean-architecture/main/assets/Clean-Architecture-Flutter-Diagram.png?raw=true)
+![alt text](screenshots/Clean-Architecture-Flutter-Diagram.png?raw=true)
 
 ## Project Structure
 
