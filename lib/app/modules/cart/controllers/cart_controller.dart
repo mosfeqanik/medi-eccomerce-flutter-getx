@@ -15,45 +15,7 @@ class CartController extends GetxController {
   var TermsCheckedBox = false.obs;
   final count = 0.obs;
   var selectedRadioTile = 0.obs;
-
-  @override
-  void onInit() {
-    // cartMedicineList.add(
-    //   MedicineModel(
-    //     medicineID: 1,
-    //     medicineName: "Ecospirin 150Mg Tablet 14’S",
-    //     medicineCompanyName: "ACME Limited",
-    //     medicinePrice: "7.50",
-    //     medicineRegularPrice: "8.43",
-    //     quantity: "0",
-    //     medicineImagePath: AssetsImagePath.Ecospirinimage,
-    //   ),
-    // );
-    // cartMedicineList.add(
-    //   MedicineModel(
-    //     medicineID: 2,
-    //     medicineName: "Napa",
-    //     medicineCompanyName: "Beximco-pharmaceuticals-ltd",
-    //     medicinePrice: "1.15",
-    //     medicineRegularPrice: "1.20",
-    //     quantity: "0",
-    //     medicineImagePath: AssetsImagePath.napaimage,
-    //   ),
-    // );
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
+  var totalPrice = "".obs;
 
   showDialogBox() {
     Get.defaultDialog(
@@ -139,17 +101,30 @@ class CartController extends GetxController {
         radius: 10.0);
   }
 
-
-  AddToCart(){
+  AddToCart({
+    required int medicineID,
+    required String medicineName,
+    required String medicinePrice,
+    required String quantity,
+    context,
+  }) {
+    var newmedicinePrice = double.parse(medicinePrice);
     cartMedicineList.add(
       MedicineModel(
-        medicineID: 2,
-        medicineName: "Napa",
-        medicineCompanyName: "Beximco-pharmaceuticals-ltd",
-        medicinePrice: "1.15",
-        medicineRegularPrice: "1.20",
-        quantity: "0",
-        medicineImagePath: AssetsImagePath.napaimage,
+        medicineID: medicineID,
+        medicineName: medicineName,
+        medicinePrice: newmedicinePrice,
+        quantity: quantity,
+      ),
+    );
+    double total = cartMedicineList.fold(
+        0, (tot, item) => tot.toDouble() + item.medicinePrice!);
+
+    totalPrice.value = total.toStringAsFixed(2);
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('$medicineName Add to Cart!'),
+        backgroundColor: Colors.green,
       ),
     );
   }

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:medi_eccomerce_flutter_getx/app/config/theme/AppColors.dart';
 import 'package:medi_eccomerce_flutter_getx/app/utils/app_strings.dart';
+import '../../../routes/app_pages.dart';
 import '../../Common_components/ListHeading.dart';
 import '../../Common_components/Badge.dart';
 import '../../cart/controllers/cart_controller.dart';
@@ -25,7 +26,7 @@ class MedicinesView extends GetView<MedicinesController> {
               medicineAppbar(),
               Container(
                   padding:
-                  EdgeInsets.symmetric(horizontal: 20.h, vertical: 10.w),
+                      EdgeInsets.symmetric(horizontal: 20.h, vertical: 10.w),
                   child: ListHeading(textHeading: AppStrings.Medicine)),
               MedicineListView(controller: controller)
             ],
@@ -65,39 +66,46 @@ class MedicinesView extends GetView<MedicinesController> {
       children: [
         SizedBox(width: 50.w),
         ListHeading(textHeading: AppStrings.Medicine),
-        Get
-            .find<CartController>()
-            .cartMedicineList
-            .isNotEmpty
-            ? Badge(
-          value: Get
-              .find<CartController>()
-              .cartMedicineList
-              .length
-              .toString(),
-          color: AppColors.BagdeColor,
-          child: IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.shopping_cart_outlined,
-              size: 30.sp,
-            ),
-            color: Colors.black,
-          ),
-        )
-            : IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.shopping_cart_outlined,
-            size: 30.sp,
-          ),
-          color: Colors.black,
-        ),
+        Get.find<CartController>().cartMedicineList.isNotEmpty
+            ? GestureDetector(
+                onTap: () {
+                  Get.toNamed(Routes.CART);
+                },
+                child: Badge(
+                  value: Get.find<CartController>()
+                      .cartMedicineList
+                      .length
+                      .toString(),
+                  color: AppColors.BagdeColor,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    child: Icon(
+                      Icons.shopping_cart_outlined,
+                      size: 30.sp,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              )
+            : GestureDetector(
+                onTap: () {
+                  Get.toNamed(Routes.CART);
+                },
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                  child: Icon(
+                    Icons.shopping_cart_outlined,
+                    size: 30.sp,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
       ],
     );
   }
 }
 
+//            Get.toNamed(Routes.CART);
 class SearchTextfield extends StatelessWidget {
   const SearchTextfield({
     Key? key,

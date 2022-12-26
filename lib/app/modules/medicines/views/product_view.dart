@@ -47,13 +47,13 @@ class ProductView extends GetView<MedicinesController> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             productImage(
-                imagePath: controller
-                    .medicineList[controller.indexvalue.value]
+                imagePath: controller.medicineList[controller.indexvalue.value]
                     .medicineImagePath!),
             PriceRow(
               controller: controller,
               productPrice: controller
-                  .medicineList[controller.indexvalue.value].medicinePrice,
+                  .medicineList[controller.indexvalue.value].medicinePrice
+                  .toString(),
               productRegularPrice: controller
                   .medicineList[controller.indexvalue.value]
                   .medicineRegularPrice,

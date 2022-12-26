@@ -101,7 +101,7 @@ class PaymentPageView extends GetView<CartController> {
           style: ThemeService.ProductHeadingTextStyle,
         ),
         Text(
-          "৳1800",
+          controller.totalPrice.value.toString(),
           style: TextStyle(
               fontSize: 35.sp,
               color: AppColors.textPrimaryColor,

@@ -53,7 +53,7 @@ class CartView extends GetView<CartController> {
               medicineDetailPart(),
               BottomPart(
                 showApplyPromoCode: true,
-                Totalprice: "৳150",
+                Totalprice: controller.totalPrice.value.toString(),
                 ShowApplyPromofunc: () {
                   controller.showDialogBox();
                 },
@@ -81,10 +81,12 @@ class CartView extends GetView<CartController> {
         MedicineList(controller: controller),
         const MyDivider(),
         medicineTotalPart(
-            label: AppStrings.Medicine_Total, totalPrice: "৳150.00"),
+            label: AppStrings.Medicine_Total,
+            totalPrice: controller.totalPrice.value.toString()),
         const MyDivider(),
         medicineTotalPart(
-            label: AppStrings.Vendor_Total, totalPrice: "৳150.00"),
+            label: AppStrings.Vendor_Total,
+            totalPrice: controller.totalPrice.value.toString()),
         orderSummary(),
         MyDivider(),
         SummaryColumn()
@@ -97,7 +99,7 @@ class CartView extends GetView<CartController> {
       children: [
         OrdersumaryPart(
           label: AppStrings.Grand_Total,
-          labelDetails: "৳150.00",
+          labelDetails: controller.totalPrice.value.toString(),
           labelColor: AppColors.secondaryColor,
           labelDetailsColor: AppColors.secondaryColor,
         ),
@@ -114,19 +116,19 @@ class CartView extends GetView<CartController> {
         ),
         OrdersumaryPart(
           label: AppStrings.Saved,
-          labelDetails: "৳150.00",
+          labelDetails: "৳0.00",
           labelColor: AppColors.secondaryColor,
           labelDetailsColor: AppColors.secondaryColor,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
+          children: [
             Text(
               AppStrings.Total_Payable,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             Text(
-              "৳150.00",
+              controller.totalPrice.value.toString(),
               style: TextStyle(fontWeight: FontWeight.bold),
             )
           ],

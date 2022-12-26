@@ -2,7 +2,7 @@ class MedicineModel {
   int? medicineID;
   String? medicineName;
   String? medicineCompanyName;
-  String? medicinePrice;
+  double? medicinePrice;
   String? medicineRegularPrice;
   String? quantity;
   String? medicineImagePath;

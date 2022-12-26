@@ -7,6 +7,7 @@ import '../../controllers/medicines_controller.dart';
 import 'package:get/get.dart';
 
 class MedicineListTileWidget extends StatelessWidget {
+  int? MedicineID;
   String? MedicineName;
   String? MedicineCompanyName;
   String? MedicineQuantity;
@@ -16,6 +17,7 @@ class MedicineListTileWidget extends StatelessWidget {
   MedicineListTileWidget({
     Key? key,
     this.MedicineName,
+    this.MedicineID,
     this.MedicineCompanyName,
     this.MedicineQuantity,
     this.MedicinePrice,
@@ -46,8 +48,13 @@ class MedicineListTileWidget extends StatelessWidget {
                 style: ThemeService.companyNameStyle,
               ),
               GestureDetector(
-                onTap: (){
-                  Get.find<CartController>().AddToCart();
+                onTap: () {
+                  Get.find<CartController>().AddToCart(
+                      medicineID: MedicineID!,
+                      medicineName: MedicineName!,
+                      medicinePrice: MedicinePrice!,
+                      quantity: MedicineQuantity!,
+                      context: Get.context);
                 },
                 child: Text(
                   "${MedicineQuantity == "0" ? "Add to cart" : MedicineQuantity}",

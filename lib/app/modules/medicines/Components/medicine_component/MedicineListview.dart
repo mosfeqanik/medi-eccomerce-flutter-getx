@@ -26,15 +26,17 @@ class MedicineListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
+              // print(controller.medicineList[index].medicineID);
               controller.indexvalue.value = index;
               Get.to(() => const ProductView());
             },
             child: MedicineListTileWidget(
               controller: controller,
               MedicineName: controller.medicineList[index].medicineName,
+              MedicineID: controller.medicineList[index].medicineID,
               MedicineCompanyName:
                   controller.medicineList[index].medicineCompanyName,
-              MedicinePrice: controller.medicineList[index].medicinePrice,
+              MedicinePrice: controller.medicineList[index].medicinePrice.toString(),
               MedicineQuantity: controller.medicineList[index].quantity,
               MedicineRegularPrice:
                   controller.medicineList[index].medicineRegularPrice,

@@ -55,7 +55,7 @@ class ConfirmationPageView extends GetView<CartController> {
             ),
             BottomPart(
               showApplyPromoCode: false,
-              Totalprice: "৳150",
+              Totalprice: controller.totalPrice.value.toString(),
               ShowApplyPromofunc: () => null,
               BtnText: "Confirm",
               BtnFunc: () {
