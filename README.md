@@ -19,7 +19,7 @@ This repo is forked from: https://github.com/phamdinhduc795397/flutter-getx-clea
 
 ## Project Structure
 
-<img align="left" src="screenshots/folder_structure.png"></img>
+<img align="left" src="screenshots/file_Structure.jpg"></img>
 
 ```
     lib
